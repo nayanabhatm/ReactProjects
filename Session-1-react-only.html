@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session1</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- All the html inside id 'root' are overridden by the ReactDOM render method.  -->
+      <h1>TEST!</h1>
+      <!-- This is also replaced by the ReactDOM render contents. -->
+    </div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script>
+      const helloworld = React.createElement('h1', {}, 'Hello World!');
+      const container = React.createElement(
+        'div',
+        {
+          style: {
+            backgroundColor: 'red',
+            color: 'white',
+          },
+        },
+        helloworld
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(container);
+    </script>
+  </body>
+</html>
